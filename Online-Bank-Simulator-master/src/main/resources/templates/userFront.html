@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="common/header :: common-header"/>
+<body roleId="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<head th:replace="common/header :: navbar"/>
+<div class="container main">
+
+    <div class="col-lg-3 col-md-6" style="text-align: center">
+        <div class="panel panel-red">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <i class="fa fa-money fa-5x"></i>
+                    </div>
+                    <div class="col-xs-9 text-right">
+                        <div>Comunalka</div>
+                    </div>
+                </div>
+            </div>
+            <a th:href="@{/account/withdraw}">
+                <div class="panel-footer">
+                    <span class="pull-left">Go to Comunalka</span>
+                    <div class="clearfix"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+    <div class="row">
+        <div class="col-lg-12">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-md-6">
+            <div class=" ">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <h2>Primary Balance: </h2>
+                        </div>
+                        <div class="col-xs-6 text-right">
+                            <h1><span th:text="${primaryAccount.accountBalance}">...</span></h1>
+                        </div>
+                    </div>
+                </div>
+                <a th:href="@{/account/primaryAccount}">
+                    <div class="panel-footer">
+                        <span class="pull-left">View History</span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+            <div class=" ">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <h2>Savings Balance: </h2>
+                        </div>
+                        <div class="col-xs-6 text-right">
+                            <h1><span th:text="${savingsAccount.accountBalance}">...</span></h1>
+                        </div>
+                    </div>
+                </div>
+                <a th:href="@{/account/savingsAccount}">
+                    <div class="panel-footer">
+                        <span class="pull-left">View History</span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+
+</div>
+
+
+<div th:replace="common/header :: body-bottom-scripts"/>
+
+</body>
+</html>
